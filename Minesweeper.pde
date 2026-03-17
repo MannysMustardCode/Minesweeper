@@ -8,10 +8,8 @@ void setup ()
     size(400, 400);
     textAlign(CENTER,CENTER);
     
-    // make the manager
     Interactive.make( this );
     
-    //your code to initialize buttons goes here
     
     
     
@@ -30,26 +28,21 @@ public void draw ()
 }
 public boolean isWon()
 {
-    //your code here
     return false;
 }
 public void displayLosingMessage()
 {
-    //your code here
 }
 public void displayWinningMessage()
 {
-    //your code here
 }
 public boolean isValid(int r, int c)
 {
-    //your code here
     return false;
 }
 public int countMines(int row, int col)
 {
     int numMines = 0;
-    //your code here
     return numMines;
 }
 public class MSButton
@@ -61,8 +54,7 @@ public class MSButton
     
     public MSButton ( int row, int col )
     {
-        // width = 400/NUM_COLS;
-        // height = 400/NUM_ROWS;
+      
         myRow = row;
         myCol = col; 
         x = myCol*width;
@@ -72,18 +64,16 @@ public class MSButton
         Interactive.add( this ); // register it with the manager
     }
 
-    // called by manager
+   
     public void mousePressed () 
     {
         clicked = true;
-        //your code here
     }
     public void draw () 
     {    
         if (flagged)
             fill(0);
-        // else if( clicked && mines.contains(this) ) 
-        //     fill(255,0,0);
+      
         else if(clicked)
             fill( 200 );
         else 
